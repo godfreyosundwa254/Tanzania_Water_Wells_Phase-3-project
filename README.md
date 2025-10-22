@@ -77,7 +77,7 @@ Imported data using pandas and inspected its structure and null values.
 
 Below is the data visualization before cleaning
 
-![Target Variable Distribution](images/target_variable_distribution.png)
+![Target Variable Distribution](images/Target_Variable_Distribution.PNG)
 
 
 
