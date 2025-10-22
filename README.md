@@ -12,6 +12,13 @@ The goal of this project is to:
 
 Ultimately, the project demonstrates how data-driven solutions can optimize decision-making in the water infrastructure sector.
 
+
+![Alt text or caption]("C:\Users\G-Osundwa\Documents\phase3\p3\Tanzania_Water_Wells_Phase_3_project\Tanzania_water_wells.jpg")
+
+
+
+
+
 # Business and Data Understanding
 # Dataset Description
 
