@@ -1,8 +1,16 @@
-# **HASE 3 PROJECT ON Tanzania WATER WELLS**
+# **PHASE 3 PROJECT ON Tanzania WATER WELLS**
+# Predicting Water Pump Functionality in Tanzania Using Machine Learning
+# Porject Overview
 
-Access to clean and reliable water is a fundamental need, yet many communities in Tanzania face challenges due to malfunctioning or poorly maintained water pumps. 
-The Tanzania Water Services dataset provides valuable information about water points across the country, including their location, management, and operational status. 
-By leveraging data science and machine learning, this project aims to build predictive models that can classify the functionality of water pumps, supporting better maintenance planning and resource allocation for improved water service delivery.
+The goal of this project is to:
+
+1. Develop and evaluate machine learning models capable of predicting the operational status of Tanzanian water wells.
+
+2. Apply an iterative modeling approach, starting from a simple baseline (Logistic Regression) and progressing to a more advanced ensemble model (Random Forest Classifier).
+
+3. Compare model performance and interpret key predictors influencing pump functionality.
+
+Ultimately, the project demonstrates how data-driven solutions can optimize decision-making in the water infrastructure sector.
 
 # **Ojectives**
 1. Develop and evaluate machine learning models capable of predicting the operational status of water pumps — whether they are functional, non-functional, or require repair.
@@ -16,5 +24,61 @@ By leveraging data science and machine learning, this project aims to build pred
 5. Compare model results based on performance metrics and interpretability to determine the most effective and practical solution.
 
 6. Support data-driven decision-making in Tanzania’s water infrastructure management by providing insights into factors influencing pump functionality.
+
+
+# Business and Data Understanding
+# Dataset Description
+
+The dataset comes from the DrivenData “Pump It Up: Data Mining the Water Table” competition
+.
+It contains information for over 59,000 water points across Tanzania, with more than 40 features describing geographic, operational, and administrative details.
+
+Target Variable: status_group
+
+functional
+
+non functional
+
+functional needs repair
+
+# Key Features
+
+amount_tsh – Total static head (water availability)
+
+gps_height – Altitude of the well
+
+installer – Who installed the pump
+
+basin, region, lga – Location and administrative zones
+
+extraction_type, management, payment – Operational and management details
+
+construction_year – Installation year of the well
+
+# Business Relevance
+
+The project supports the sustainable management of Tanzania’s water resources by helping identify:
+
+Wells that are likely to fail or need maintenance
+
+High-risk regions where interventions should be prioritized
+
+Factors that most influence well reliability
+
+# Data Loading and Cleaning
+
+Imported data using pandas and inspected its structure and null values.
+
+Dropped irrelevant or redundant features (recorded_by, wpt_name).
+
+Addressed missing values using appropriate imputation strategies.
+
+Standardized column types and encoded categorical features for modeling.
+
+Confirmed data consistency and absence of duplicates.
+
+
+
+7. 
 
 
