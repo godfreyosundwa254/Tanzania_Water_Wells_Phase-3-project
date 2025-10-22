@@ -23,7 +23,6 @@ Ultimately, the project demonstrates how data-driven solutions can optimize deci
 # Dataset Description
 
 The dataset comes from the DrivenData “Pump It Up: Data Mining the Water Table” competition
-.
 It contains information for over 59,000 water points across Tanzania, with more than 40 features describing geographic, operational, and administrative details.
 
 Target Variable: **status_group**
@@ -62,19 +61,25 @@ Factors that most influence well reliability
 
 The key stakeholders in this project include:
 
-Government of Tanzania – Ministry of Water: Uses insights to guide infrastructure investments and maintenance planning.
+**Government of Tanzania – Ministry of Water**: Uses insights to guide infrastructure investments and maintenance planning.
 
-Non-Governmental Organizations (NGOs): Partners such as World Bank, WaterAid, and UNICEF who support rural water access projects.
+**Non-Governmental Organizations (NGOs)**: Partners such as World Bank, WaterAid, and UNICEF who support rural water access projects.
 
-Local Communities: Residents relying on boreholes and wells for daily water needs.
+**Local Communities**: Residents relying on boreholes and wells for daily water needs.
 
-Project Engineers and Data Analysts: Responsible for maintaining well functionality and using data-driven tools for monitoring.
+**Project Engineers and Data Analysts**: Responsible for maintaining well functionality and using data-driven tools for monitoring.
 
-Policy Makers: Use project findings to prioritize regions for intervention and optimize resource allocation.
+**Policy Makers**: Use project findings to prioritize regions for intervention and optimize resource allocation.
 
 # Data Loading and Cleaning
 
 Imported data using pandas and inspected its structure and null values.
+
+Below is the data visualization before cleaning
+
+![Target Variable Distribution](images/target_variable_distribution.png)
+
+
 
 Dropped irrelevant or redundant features (recorded_by, wpt_name).
 
