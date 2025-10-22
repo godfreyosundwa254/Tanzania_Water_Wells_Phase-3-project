@@ -29,17 +29,17 @@ Target Variable: **status_group**
 
 # Key Features
 
-amount_tsh – Total static head (water availability)
+**amount_tsh** – Total static head (water availability)
 
-gps_height – Altitude of the well
+**gps_height** – Altitude of the well
 
-installer – Who installed the pump
+**installer** – Who installed the pump
 
-basin, region, lga – Location and administrative zones
+**basin, region, lga** – Location and administrative zones
 
-extraction_type, management, payment – Operational and management details
+**extraction_type, management, payment** – Operational and management details
 
-construction_year – Installation year of the well
+**construction_year** – Installation year of the well
 
 # Business Relevance
 
