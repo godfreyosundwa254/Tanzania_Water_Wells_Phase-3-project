@@ -58,6 +58,20 @@ High-risk regions where interventions should be prioritized
 
 Factors that most influence well reliability
 
+# Stakeholders
+
+The key stakeholders in this project include:
+
+Government of Tanzania – Ministry of Water: Uses insights to guide infrastructure investments and maintenance planning.
+
+Non-Governmental Organizations (NGOs): Partners such as World Bank, WaterAid, and UNICEF who support rural water access projects.
+
+Local Communities: Residents relying on boreholes and wells for daily water needs.
+
+Project Engineers and Data Analysts: Responsible for maintaining well functionality and using data-driven tools for monitoring.
+
+Policy Makers: Use project findings to prioritize regions for intervention and optimize resource allocation.
+
 # Data Loading and Cleaning
 
 Imported data using pandas and inspected its structure and null values.
