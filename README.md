@@ -19,6 +19,7 @@ Ultimately, the project demonstrates how data-driven solutions can optimize deci
 
 
 
+
 # Business and Data Understanding
 # Dataset Description
 
@@ -77,9 +78,13 @@ Imported data using pandas and inspected its structure and null values.
 
 Below is the data visualization before cleaning
 
-![Target Variable Distribution](images/Target_Variable_Distribution.PNG)
+![Target Variable Distribution](images/target_variable_distribution.png)
 
+![Target Variable Distribution](images/Top_10_Founder.png)
 
+![Target Variable Distribution](Functional_Status_by_Region.png)
+
+![Target Variable Distribution](Distribuition_of_Water_Sources.png)
 
 Dropped irrelevant or redundant features (recorded_by, wpt_name).
 
