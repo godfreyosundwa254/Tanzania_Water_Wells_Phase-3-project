@@ -85,13 +85,70 @@ Below is the data visualization before cleaning
 ![Target Variable Distribution](images/Functional_Status_by_Region.png)
 ![Target Variable Distribution](images/Distribuition_of_Water_Sources.png)
 
-Dropped irrelevant or redundant features (recorded_by, wpt_name).
 
-Addressed missing values using appropriate imputation strategies.
+# Key Insights
 
-Standardized column types and encoded categorical features for modeling.
+**Water Sources Distribution:**
+The majority of waterpoints are sourced from springs and shallow wells, followed by machine-drilled boreholes and rivers. Less common sources include rainwater harvesting, hand-dug wells, lakes, dams, and others.
 
-Confirmed data consistency and absence of duplicates.
+**Functional Status by Region:**
+Most waterpoints across regions are functional, though a significant portion are non-functional, and a smaller fraction require repair. This imbalance highlights operational and maintenance challenges, and it’s an important consideration for model training since the target variable is unevenly distributed.
+
+**Funder Distribution:**
+The Government of Tanzania is the top funder of water projects, followed by entries labeled as “unknown” (which may need further investigation), Danida, Hesawa, Rwssp, World Bank, Kkkt, World Vision, Unicef, and Tasaf.
+
+**The Following steps were taken to clean the data**
+
+1. Handling of missing Values
+2. Conversion of data types & handling inconsistencies.
+3. Dropping Reedundant/Low-value Features
+
+   After cleaning following steps were performed to finalize data preparation
+1.  Scaling numeric features
+2. Encoding categorical variables
+3. Encoding the target (status_group)
+4. Splitting Data for Modeling
+
+
+# Modeling
+
+# Baseline Logistic Regression 
+a Baselinge ligistic regression model was created and bellow were the model performance
+
+Baseline Logistic Regression Results
+Training Accuracy: 0.624125
+Testing Accuracy: 0.6375
+
+Classification Report:
+              precision    recall  f1-score   support
+
+           0       0.63      0.77      0.69      1007
+           1       0.00      0.00      0.00       134
+           2       0.65      0.58      0.61       859
+
+    accuracy                           0.64      2000
+   macro avg       0.43      0.45      0.44      2000
+weighted avg       0.60      0.64      0.61      2000
+
+
+
+
+The baseline logistic regression model achieved a training accuracy of **62.1%** and a testing accuracy of **63.75%**, indicating moderate but limited predictive performance.
+
+**Observations:**
+
+The model performs reasonably well on the majority classes (0 and 2), with F1-scores around 0.62–0.63.
+
+However, it completely fails to predict class 1 (F1-score = 0), suggesting class imbalance — this class likely has very few samples compared to others.
+
+The small gap between training and testing accuracy indicates no significant overfitting, but overall performance is low.
+
+**Insights:**
+
+The low recall and precision for the minority class highlight the need for data balancing techniques (e.g., SMOTE, class weights) or more advanced models (e.g., Random Forest, XGBoost).
+
+This baseline provides a useful benchmark for comparing improved models after feature engineering or resampling.
+
 
 
  
