@@ -250,7 +250,7 @@ The Random Forest was able to capture non-linear patterns and feature interactio
 Although it is less interpretable than logistic regression, its higher precision and recall across multiple categories make it a more reliable choice for predicting water pump functionality. 
 Therefore, the final model selected is the Tuned Random Forest Classifier, as it offers the best trade-off between predictive accuracy, stability, and practical usefulness for decision-making in water infrastructure management.
 
-Recommendations and Next Steps
+# Recommendations and Next Steps
 Based on the results of the tuned Random Forest model, it is recommended that this predictive system be integrated into the decision-making process for water pump monitoring and maintenance in Tanzania. 
 The model’s high accuracy and reliability in distinguishing between functional, non-functional, and repair-needed pumps can help prioritize maintenance efforts and allocate resources efficiently.
 By identifying at-risk pumps before complete failure, local authorities and NGOs can reduce downtime, improve water accessibility, and enhance overall service reliability in rural communities.
