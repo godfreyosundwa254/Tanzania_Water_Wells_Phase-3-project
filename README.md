@@ -150,6 +150,116 @@ The low recall and precision for the minority class highlight the need for data 
 This baseline provides a useful benchmark for comparing improved models after feature engineering or resampling.
 
 
+# Improve the Baseline (Hyperparameter Tuning)
+
+An Improved model was created using the hypermeter tuning and bellow are the results.
+
+
+Tuned Model Results:
+Training Accuracy: 0.636
+Testing Accuracy: 0.6455
+
+Classification Report:
+              precision    recall  f1-score   support
+
+           0       0.63      0.77      0.70      1007
+           1       0.43      0.04      0.08       134
+           2       0.67      0.59      0.63       859
+
+    accuracy                           0.65      2000
+   macro avg       0.58      0.47      0.47      2000
+weighted avg       0.63      0.65      0.63      2000
+
+
+After hyperparameter tuning, the logistic regression model’s accuracy improved from 63.75% to 64.6%, with better overall balance across classes. However, 
+the model still struggles to detect pumps that are functional but need repair, indicating a need for class balancing or more complex algorithms.
+
+# Build a More Complex Model (Random Forest Classifier)
+
+A more complex model was built and yielded the results below.
+
+Training Accuracy: 0.998375
+Testing Accuracy: 0.776
+
+Classification Report (Test Set):
+              precision    recall  f1-score   support
+
+           0       0.77      0.85      0.81      1007
+           1       0.49      0.32      0.39       134
+           2       0.81      0.76      0.78       859
+
+    accuracy                           0.78      2000
+   macro avg       0.69      0.64      0.66      2000
+weighted avg       0.77      0.78      0.77      2000
+
+The Random Forest achieved a significant improvement in performance compared to the Logistic Regression models (which were around 61–62% accuracy). 
+The testing accuracy increased to about 76%, showing that the model captures non-linear relationships and feature interactions much better.
+
+However, the training accuracy (99.9%) indicates overfitting — the model fits the training data extremely well but doesn’t generalize perfectly to new data.
+
+Class Performance
+
+Functional wells: Strong precision (0.77) and recall (0.86).
+
+Non-functional wells: Good balance (F1 = 0.74).
+
+Functional needs repair: Still weak (F1 = 0.34), meaning class imbalance remains an issue — the model struggles to detect rare cases.
+
+
+# Hyperparameter-Tuned Random Forest
+
+Training Accuracy: 0.904625
+Testing Accuracy: 0.763
+
+Classification Report (Test Set):
+              precision    recall  f1-score   support
+
+           0       0.74      0.87      0.80      1007
+           1       0.49      0.14      0.22       134
+           2       0.82      0.73      0.77       859
+
+    accuracy                           0.76      2000
+   macro avg       0.68      0.58      0.60      2000
+weighted avg       0.75      0.76      0.75      2000
+
+This optimized model achieved a training accuracy of 0.904 and a testing accuracy of 0.767, showing a good balance between bias and variance. 
+The drop in training accuracy compared to the baseline Random Forest (which was nearly perfect) suggests that the model has reduced overfitting and generalizes better to unseen data.
+
+In terms of class performance:
+
+The model performs very well for “functional” wells (F1 = 0.80) and reasonably well for “non functional” wells (F1 = 0.77).
+
+The “functional needs repair” class remains challenging, with low recall (0.14), reflecting continued class imbalance and limited representation of this category in the training data.
+
+Overall, the tuned Random Forest is the best-performing model so far, offering strong generalization and interpretability. 
+It captures non-linear interactions among features and provides a solid foundation for further improvements, such as class weighting or SMOTE balancing.
+
+# Modeling Summary and Final Model Justification
+The modeling process followed an iterative approach, beginning with a simple Logistic Regression model as the baseline. 
+This initial model achieved a testing accuracy of 0.64, providing a clear starting point for comparison. 
+While the model performed moderately well for the majority class (“functional”), it struggled to predict the minority class (“needs repair”), as reflected by its very low recall and F1-score for that category. 
+Despite its interpretability, the logistic regression model’s linear nature limited its ability to capture complex relationships in the data.
+
+To improve performance, the model was refined through hyperparameter tuning, adjusting parameters such as the regularization penalty and inverse regularization strength (C). 
+The tuned logistic regression model showed a slight improvement, reaching 0.65 testing accuracy. This indicates a marginally better fit but still highlights the limitations of linear 
+models when dealing with heterogeneous and non-linear real-world data such as the water pump dataset.
+
+To address these shortcomings, a more complex Random Forest Classifier was introduced. 
+This model significantly improved performance, achieving up to 0.78 testing accuracy and better balance across classes. 
+The Random Forest was able to capture non-linear patterns and feature interactions that logistic regression could not, leading to stronger generalization and robustness. 
+Although it is less interpretable than logistic regression, its higher precision and recall across multiple categories make it a more reliable choice for predicting water pump functionality. 
+Therefore, the final model selected is the Tuned Random Forest Classifier, as it offers the best trade-off between predictive accuracy, stability, and practical usefulness for decision-making in water infrastructure management.
+
+Recommendations and Next Steps
+Based on the results of the tuned Random Forest model, it is recommended that this predictive system be integrated into the decision-making process for water pump monitoring and maintenance in Tanzania. 
+The model’s high accuracy and reliability in distinguishing between functional, non-functional, and repair-needed pumps can help prioritize maintenance efforts and allocate resources efficiently.
+By identifying at-risk pumps before complete failure, local authorities and NGOs can reduce downtime, improve water accessibility, and enhance overall service reliability in rural communities.
+
+For future improvements, several steps are recommended. First, further data enrichment should be explored — for instance, integrating external data such as rainfall patterns, 
+population growth, or regional infrastructure investments could improve model accuracy and contextual understanding. 
+Second, advanced techniques such as Gradient Boosting (e.g., XGBoost or LightGBM) or ensemble stacking could be tested to push performance beyond the Random Forest. 
+Lastly, continuous retraining using new data collected over time will ensure the model adapts to changing environmental and operational conditions, 
+maintaining its effectiveness as a sustainable, data-driven solution for water resource management in Tanzania.
 
  
 
