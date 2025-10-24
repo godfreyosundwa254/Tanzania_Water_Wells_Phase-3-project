@@ -82,9 +82,8 @@ Below is the data visualization before cleaning
 
 ![Target Variable Distribution](images/Top_10_Founder.png)
 
-![Target Variable Distribution](Functional_Status_by_Region.png)
-
-![Target Variable Distribution](Distribuition_of_Water_Sources.png)
+![Target Variable Distribution](images/Functional_Status_by_Region.png)
+![Target Variable Distribution](images/Distribuition_of_Water_Sources.png)
 
 Dropped irrelevant or redundant features (recorded_by, wpt_name).
 
